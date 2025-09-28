@@ -1,12 +1,10 @@
 pipeline {
     agent any
-    environment {
-        BRANCH_NAME = env.GIT_BRANCH ?: 'main'
-    }
     stages {
-        stage('Checkout') {
+        stage('Hello World') {
             steps {
-                checkout scm
+                echo 'Hello, World! 🌍'
+                echo 'This is a basic Jenkins pipeline.'
             }
         }
     }
